@@ -1,0 +1,65 @@
+# Author:	Chelsea Rath & Terry Payne
+# Program:	Network Programming Assignment
+# File:		manual.txt
+# Due Date:	12/6/2011
+# Description:	This file explains what the program does and how to execute it.
+
+
+###############################################################################
+    HOW TO BUILD SYSTEM
+###############################################################################
+1. In command line, run the make file
+	$ranger make
+
+
+###############################################################################
+    HOW TO EXECUTE PROGRAM
+###############################################################################
+1. Duplicate the current session you are running.
+	- be sure to navigate in both windows to the folder that contains
+	  all the files for this project
+
+2. In one of the windows, run the server class file
+	$ranger java fileServer
+
+3. In the other window, run the client class file, entering the name of the file
+   you wish to copy as an argument.
+	- In the provided textFiles folder, there are three sample files to 
+	  choose from of different formats.
+	  1. file1.docx
+	  2. file2.txt
+	  3. file3.pdf
+		$ranger java fileClient file1.txt
+
+
+###############################################################################
+    HOW TO USE PROGRAM
+###############################################################################
+1. Once the fileClient class has been run, the file will have automatically 
+   been copied and placed within the same file as the other text files.
+	- navigate to the textFile folder and list the items... the file "copy"
+	  will be there with the proper extension.
+		$ranger cd textFiles
+	- either view each file to see if they are the same, or run a diff 
+	  command to view the differences between the two.
+		$ranger/textFiles diff file1.txt copy.txt
+
+###############################################################################
+    OTHER
+###############################################################################
+1. Creating a .tar file
+	- command [-options] /location/of/new/file.tar /files/to/archive
+	- Options:
+		-c = create
+		-f = read to/ from the named file (instead of the device /tape)
+		-t = list contents of .tar file
+		-r = append to a .tar file
+		-v = verbose (tells you everything its doing)
+		-x = extract contents of a .tar file
+		-z = compress files (not so useful for minc files)
+	
+		$ranger tar -cvf project.tar textFiles
+
+2. Extracting files from a .tar file
+	$ranger tar -xf project.tar
+	
